@@ -1,0 +1,22 @@
+<ul>
+    <li> <a href="findActorsForFilm">Find Actors For Film</a></li>
+    <li> <a href="findActorsForNFilm">Find Actors For N Films</a></li>
+    <li> <a href="findFilmsForCurrentAndPreviousYear">Find Films For Current And Previous Year</a></li>
+    <li> <a href="findActorsAsDirector">Find Actors As Director</a></li>
+    <li> <a href="deleteFilmsOlderGivenYears">Delete Films Older Given Years</a></li>
+    <li> <a href="index">Index</a></li>
+
+    <li> <a href="deleteFilms">Delete Films</a></li>
+   <c:choose>
+
+      <c:when test="${not empty user}">
+       	   Hello ${user.username}! Role -> ${user.role}
+       	   <a href="/logout">Logout</a>
+       </c:when>
+
+      <c:otherwise>
+         	   <li><b><a href="login">Login</a></b></li>
+            <c/:otherwise>
+   </c:choose>
+
+</ul>

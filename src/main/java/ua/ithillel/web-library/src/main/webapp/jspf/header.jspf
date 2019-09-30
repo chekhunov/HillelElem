@@ -1,0 +1,17 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<ul>
+    <li> <a href="/">Index</a></li>
+    <li> <a href="/deleteFilms">Delete films</a></li>
+    
+    <c:choose>
+        <c:when test="${not empty abonent}">
+             Hello ${abonent.lastname}! Role -> ${abonent.role}
+             <a href="/logout">Logout</a>
+        </c:when>
+        <c:otherwise>
+            <li><b><a href="login">Login</a></b></li>
+        </c:otherwise>
+    </c:choose>
+       
+    
+</ul>
